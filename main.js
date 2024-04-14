@@ -1,4 +1,5 @@
 
+
 const deck = []
 suiteList = ['_of_diamonds','_of_hearts','_of_spades','_of_clubs']
 for(let i = 1 ; i < 14 ; i++){
@@ -6,6 +7,8 @@ for(let i = 1 ; i < 14 ; i++){
         deck.push(i+element)
     })
 }
+
+
 
 function chooseCard(total=0, turn=1){
     console.log(total, turn)
@@ -138,7 +141,7 @@ function dealerAI(){
         
     }
     else if(13 >= dealerTotal > 11){
-        if(Math.floor( Math.random()*2) === 1){
+        if(Math.floor( Math.random()*(2)) === 1){
             card = chooseCard(total=dealerTotal)
             dealerNewCard = card[0]
             dealerTotal += dealerNewCard
@@ -155,7 +158,7 @@ function dealerAI(){
         }
     }
     else if(15 >= dealerTotal > 13 ){
-        if(Math.floor( Math.random()*4) === 1){
+        if(Math.floor( Math.random()*3) === 1){
             card = chooseCard(total=dealerTotal)
             dealerNewCard = card[0]
             dealerTotal += dealerNewCard
@@ -173,7 +176,7 @@ function dealerAI(){
 
     }
     else if(18 >= dealerTotal > 15){
-        if(Math.floor( Math.random()*6) === 1){
+        if(Math.floor( Math.random()*5) === 1){
             card = chooseCard(total=dealerTotal)
             dealerNewCard = card[0]
             dealerTotal += dealerNewCard
@@ -224,12 +227,12 @@ function hidehelp(){
     helPopup.close()
 }
 
-let player_sum = document.getElementById("player_sum")
-let dealer_sum = document.getElementById("dealer_sum")
+let player_sum = document.getElementById("player_sum") //<--
+let dealer_sum = document.getElementById("dealer_sum") //<--
 let popUp = document.getElementById("pop_up")
 let helPopup = document.getElementById("help")
-let playerCards = document.getElementById("player-cards")
-let dealerCards = document.getElementById("dealer-cards")
+let playerCards = document.getElementById("player-cards") //<--
+let dealerCards = document.getElementById("dealer-cards") //<--
 let addition = document.getElementById("addition")
 let dealer_addition = document.getElementById("dealer_addition")
 
