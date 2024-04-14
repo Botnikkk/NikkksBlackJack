@@ -25,18 +25,18 @@ function chooseCard(total=0){
 
 function addCard(player, card){
     if(player.id === "dealer-cards"){
-        let command = '<img class="card" src="cards/' + card + ".png" +  '">'
+        let command = '<img class="card" src="/cards/' + card + ".png" +  '">'
         if(player.childNodes.length === 0){
-            player.innerHTML = command + '<img class="card" src="cards/hidden.png">'
+            player.innerHTML = command + '<img class="card" src="/cards/hidden.png">'
         }
         dealerString += command
     }
     else{
         if(player.childNodes.length <= 1){
-            let command = '<img class="card" src="cards/' + card + ".png" +  '">'
+            let command = '<img class="card" src="/cards/' + card + ".png" +  '">'
             player.innerHTML += command
         }else{
-            let command = '<img id="playerCard" class="hidden card" src="cards/' + card + ".png" +  '">'
+            let command = '<img id="playerCard" class="hidden card" src="/cards/' + card + ".png" +  '">'
             player.innerHTML += command
         }
     }
