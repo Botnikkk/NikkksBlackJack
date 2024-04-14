@@ -39,8 +39,7 @@ function addCard(player, card){
             let command = '<img id="playerCard" class="hidden card" src="/NikkksBlackJack/cards/' + card + ".png" +  '">'
             player.innerHTML += command
         }
-    }
-    console.log(command)
+    }   
 }
 
 function hit(){
