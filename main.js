@@ -40,6 +40,7 @@ function addCard(player, card){
             player.innerHTML += command
         }
     }
+    console.log(command)
 }
 
 function hit(){
