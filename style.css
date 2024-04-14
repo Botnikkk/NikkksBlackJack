@@ -1,0 +1,324 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+
+html, body {
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-image: url("/ImpImages/backround.jpg") ;
+    /* background-color: rgba(37, 106, 54, 0.25);
+    background-blend-mode:lighten; */
+    background-size: 100% 100%;
+    background-attachment:fixed; 
+    background-repeat: no-repeat;
+    overflow-x:hidden ;
+    scroll-behavior:smooth;
+    
+
+}
+
+/* <------------------------------ MAIN GAME SECTION -----------------> */
+
+.section{
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    text-align: center;
+}
+
+.logo{
+    height: 17rem;
+    display :inline-block;
+}
+
+.help{
+    background-color: wheat;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-radius: 5rem;
+    font-size: 5rem;
+}
+
+.header{
+    width: 100%;
+}
+
+
+.text{
+    font-size: 4rem;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    display: inline;
+}
+/* <------------------------------ MAIN GAME SECTION -----------------> */
+
+/* <------------------------------ BUTTON SECTION -----------------> */
+
+button{
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    background-color: #F1E2D0;
+    height: 3rem;
+    width: 15rem;
+    margin: .1rem;
+    border-color: #BAA393;
+    border-radius: 0.5rem;    
+}
+
+
+
+/* <------------------------------ BUTTON SECTION -----------------> */
+/* <------------------------------ CARDS SECTION -----------------> */
+.cardbox{
+    display: flexbox;
+    margin: 2rem;
+}
+
+.player-cards, .dealer-cards{
+    width: 34rem;
+    display: inline-block;
+    text-align: center;
+    height: fit-content;
+}
+
+
+.card{
+    display: inline-flex;
+    height: 12rem;
+    margin: 0.5rem;
+}
+/* <------------------------------ CARD SECTION -----------------> */
+/* <------------------------------ POP-UP SECTION -----------------> */
+
+.pop_up{
+    height: 20vh;
+    width: 50vw;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    margin: auto;
+    background-image: url("/ImpImages/backround.jpg");
+    background-size: 100%;
+}
+
+.pop_text{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    color: whitesmoke;
+    font-weight: 600; 
+}
+
+#pop_up{
+    margin: 5rem auto;
+}
+
+
+/* <------------------------------ POP-UP SECTION -----------------> */
+
+.addition{
+    font-size: 3rem;
+    color: gold;
+    position: fixed;
+    font-family: 'Tektur', cursive;
+}
+
+.hidden{
+    transform : translateY(-50%);
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 0.2s ease-in-out;
+}
+
+.show{
+    transform : translateY(-100%);
+    opacity: 1;
+    filter: blur(0);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.main-container{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+
+.deck{
+    margin: 3rem;
+    height: 23rem;
+}
+
+.pop_up::backdrop{
+    background: linear-gradient(45deg, black, rgb(24, 98, 24));
+    opacity: .3;
+}
+
+/* <------------------------------ RESPONSIVE SECTION -----------------> */
+
+@media only screen and (max-width:1600px){
+    :root{
+        font-size: 90%;
+    }
+
+    .main-container{
+        margin: 3rem 0;
+    }
+
+}
+
+@media only screen and (max-width:1400px){
+    :root{
+        font-size: 80%;
+    }
+
+    .logo{
+        height: 20rem;
+    }
+
+    .main-container{
+        margin: 5rem 0;
+    }
+
+}
+
+@media only screen and (max-width:1250px){
+    :root{
+        font-size: 70%;
+    }
+
+    .logo{
+        height: 25rem;
+    }
+
+    .main-container{
+        margin: 7rem 0;
+    }
+}
+
+@media only screen and (max-width:1090px){
+    :root{
+        font-size: 60%;
+    }
+
+    .logo{
+        height: 30rem;
+    }
+
+    .main-container{
+        margin: 10rem 0;
+    }
+}
+
+@media only screen and (max-width:930px){
+    :root{
+        font-size: 60%;
+    }
+
+    .logo{
+        height: 20rem;
+    }
+    .main-container{
+        margin: 0;
+        grid-auto-flow: row;
+    }
+
+    .player-container, .dealer-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:650px){
+    :root{
+        font-size: 50%;
+    }
+
+    .logo{
+        height: 23rem;
+    }
+
+    .main-container{
+        margin: 3rem 0;
+    }
+}
+
+@media only screen and (max-width:550px){
+    :root{
+        font-size: 45%;
+    }
+
+    .main-container{
+        margin: 6rem 0;
+    }
+}
+
+@media only screen and (max-width:500px){
+    :root{
+        font-size: 45%;
+    }
+
+    .logo{
+        height: 17rem;
+    }
+    
+    .player-container, .dealer-container{
+        display: inline-block;
+    }
+    .text{
+        display: block;
+    }
+
+    .main-container{
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width:400px){
+    :root{
+        font-size: 40%;
+    }
+
+    .main-container{
+        margin: 5rem 0;
+    }
+}
+@media only screen and (max-width:350px){
+    :root{
+        font-size: 35%;
+    }
+
+    .logo{
+        height: 18rem;
+    }
+
+    .main-container{
+        margin: 10rem 0;
+    }
+
+}
+@media only screen and (max-width:300px){
+    :root{
+        font-size: 30%;
+    }
+
+    .logo{
+        height: 18rem;
+    }
+
+    .main-container{
+        margin: 20rem 0;
+    }
+
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikkk's blackjack</title>
+    <link rel="icon" href="impImages/title.jpg">
+    <link rel="icon" href="/ImpImages/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="section">
+        <div class="header">
+            <img  class="logo" src="/ImpImages/logo.png">
+            <ion-icon onclick="openhelp()" class="help" name="help-circle-outline"></ion-icon>
+        </div>
+        <br><br><br>
+        <div class="main-container">
+            <div class="player-container">
+                <p class="text" id="player_sum"></p>
+                <span id="addition" class="hidden addition"> +10</span>
+                <div id="player-cards" class="cardbox player-cards"></div>
+            </div>
+            <div class="button-container">
+                <div class="buttons">
+                    <button onclick="hit()">HIT</button>
+                    <br>
+                    <button onclick="stand()">STAND</button>
+                </div>
+                <img class="deck" src="/ImpImages/deck.png">
+            </div>
+            <div class="dealer-container">
+                <p class="text" id="dealer_sum"></p>
+                <span id="dealer_addition" class="hidden addition"> +??</span>
+                <div id="dealer-cards" class="cardbox dealer-cards"></div>
+            </div>
+        </div>
+        <dialog class="pop_up" id="pop_up">
+            <b id="pop_text" class="pop_text">blah blah blah blah</b>
+            <br><br><br>
+            <button onclick="newgame()">Play again</button>
+        </dialog>
+        <dialog class="pop_up" id="help">
+            <b id="pop_text" class="pop_text">
+                Rules :
+
+            </b>
+            <br><br><br>
+            <button onclick="hidehelp()">Okay</button>
+        </dialog>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>
