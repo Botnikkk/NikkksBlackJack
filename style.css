@@ -7,8 +7,6 @@ html, body {
     margin: 0;
     padding: 0;
     background-image: url("ImpImages/backround.jpg") ;
-    /* background-color: rgba(37, 106, 54, 0.25);
-    background-blend-mode:lighten; */
     background-size: 100% 100%;
     background-attachment:fixed; 
     background-repeat: no-repeat;
@@ -33,7 +31,8 @@ html, body {
 }
 
 .help{
-    background-color: wheat;
+    background-color: #dfdfdf;
+    border-color: #d10000;
     position: fixed;
     top: 0;
     right: 0;
@@ -50,6 +49,9 @@ html, body {
     font-size: 4rem;
     font-family: 'Raleway', sans-serif;
     color: white;
+    text-shadow: -0.3rem 0.2rem black;
+    -webkit-text-stroke-width: 0.05rem;
+    -webkit-text-stroke-color: #d10000;
     display: inline;
 }
 /* <------------------------------ MAIN GAME SECTION -----------------> */
@@ -60,12 +62,13 @@ button{
     font-size: 2rem;
     font-family: 'Raleway', sans-serif;
     font-weight: bolder;
-    background-color: #F1E2D0;
-    height: 3rem;
+    background-color: #dfdfdf;
     width: 15rem;
     margin: .2rem;
-    border-color: #BAA393;
-    border-radius: 0.5rem;   
+    border-width: 0.3rem;
+    border-color: #d10000;
+    border-radius: 2rem;
+    
 }
 
 
@@ -103,6 +106,8 @@ button{
     margin: auto;
     background-image: url("ImpImages/backround.jpg");
     background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    background-blend-mode:darken;
     background-attachment:fixed; 
     background-repeat: no-repeat;
     overflow-x:hidden ;
@@ -111,7 +116,9 @@ button{
 .pop_text{
     font-family: 'Raleway', sans-serif;
     font-size: 2rem;
-    color: whitesmoke;
+    /* color: rgb(231, 197, 0); */
+    color:gold ;
+    text-shadow: -0.2rem 0.2rem black;
     font-weight: 600; 
 }
 
@@ -119,12 +126,17 @@ button{
     margin: 5rem auto;
 }
 
+#help{
+    height: 90vh;
+    width: 90vw;
+}
 
 /* <------------------------------ POP-UP SECTION -----------------> */
 
 .addition{
     font-size: 3rem;
     color: gold;
+    text-shadow: -0.2rem 0.2rem black;
     font-family: 'Tektur', cursive;
 }
 
@@ -213,6 +225,10 @@ button{
     .main-container{
         margin: 10rem 0;
     }
+
+    #help .pop_text{
+        font-size:2.5rem
+    }
 }
 
 @media only screen and (max-width:930px){
@@ -244,6 +260,10 @@ button{
         align-items: center;
         justify-content: center;
     }
+
+    #help .pop_text{
+        font-size:2.2rem
+    }
 }
 
 @media only screen and (max-width:650px){
@@ -258,6 +278,10 @@ button{
     .main-container{
         margin: 3rem 0;
     }
+
+    #help .pop_text{
+        font-size:2.5rem
+    }
 }
 
 @media only screen and (max-width:550px){
@@ -267,6 +291,10 @@ button{
 
     .main-container{
         margin: 6rem 0;
+    }
+
+    #help .pop_text{
+        font-size:2.7rem
     }
 }
 
