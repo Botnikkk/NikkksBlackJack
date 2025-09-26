@@ -113,14 +113,31 @@ button{
     overflow-x:hidden ;
 }
 
+.pop_up::backdrop{
+    background: linear-gradient(45deg, black, rgb(24, 98, 24));
+    opacity: .3;
+}
+
 .pop_text{
     font-family: 'Raleway', sans-serif;
     font-size: 2rem;
-    /* color: rgb(231, 197, 0); */
     color:gold ;
     text-shadow: -0.2rem 0.2rem black;
     font-weight: 600; 
 }
+
+.hidden-popup{
+    transform : translateY(+100%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.show-popup{
+    transform : translateY(0);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
 
 #pop_up{
     margin: 5rem auto;
@@ -154,7 +171,6 @@ button{
     transition: all 0.3s ease-in-out;
 }
 
-
 .main-container{
     display: grid;
     grid-auto-flow: column;
@@ -166,10 +182,7 @@ button{
     height: 23rem;
 }
 
-.pop_up::backdrop{
-    background: linear-gradient(45deg, black, rgb(24, 98, 24));
-    opacity: .3;
-}
+
 
 /* <------------------------------ RESPONSIVE SECTION -----------------> */
 

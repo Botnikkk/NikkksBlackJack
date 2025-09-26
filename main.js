@@ -8,8 +8,6 @@ for(let i = 1 ; i < 14 ; i++){
     })
 }
 
-
-
 function chooseCard(total=0, turn=1){
     console.log(total, turn)
     let card = deck[Math.floor(Math.random()*deck.length)]
@@ -112,19 +110,6 @@ function stand(){
     }
 }
 
-function conclusion(text){
-    dealerCards.innerHTML = dealerString
-    dealer_sum.innerText = "Dealer's total : " + dealerTotal
-    popUp.showModal()
-    let popText = document.getElementById("pop_text")
-    popText.innerText = text
-}
-
-function newgame(){
-    popUp.close()
-    location.reload()
-}
-
 function dealerAI(){
 
     if(dealerTotal <= 11){
@@ -219,12 +204,33 @@ function winCheck(){
     }
 }
 
+function conclusion(text){
+    dealerCards.innerHTML = dealerString
+    dealer_sum.innerText = "Dealer's total : " + dealerTotal
+    popUp.showModal()
+    popUp.classList.remove("hidden-popup")
+    popUp.classList.add("show-popup")
+    let popText = document.getElementById("pop_text")
+    popText.innerText = text
+}
+
+function newgame(){
+    popUp.close()
+    popUp.classList.remove("show-popup")
+    popUp.classList.add("hidden-popup")
+    location.reload()
+}
+
 function openhelp(){
     helPopup.showModal()
+    helPopup.classList.remove("hidden-popup")
+    helPopup.classList.add("show-popup")
 }
 
 function hidehelp(){
     helPopup.close()
+    helPopup.classList.add("hidden-popup")
+    helPopup.classList.remove("show-popup")
 }
 
 let player_sum = document.getElementById("player_sum") //<--
